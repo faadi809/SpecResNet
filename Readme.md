@@ -1,20 +1,8 @@
 # SpecResNet: Hyperspectral Image Compression via Hybrid
 Residual Learning and Spectral Calibration
 
-## Abstract
-Hyperspectral imaging provides rich spatial-spectral information but generates huge data 2
-volumes, posing significant challenges for storage, transmission, and real-time processing 3
-in remote sensing applications. In this study, we propose SpecResNet, a 3D autoencoder- 4
-based model for hyperspectral image compression. This framework introduces Hybrid 5
-residual blocks for preserving representational power, and a Spectral Calibration (SC) block 6
-to enhance spectral fidelity. It also uses Squeeze-and-Excitation (SE) blocks for adaptive 7
-feature recalibration. Our model obtains different compression operating points by varying 8
-model capacity, with bitrate emerging implicitly from the learned latent representations. Ex- 9
-periments on several benchmark datasets show that SpecResNet surpasses the performance 10
-of existing frameworks on most datasets in terms of PSNR, MS-SSIM, and SAM, demonstrat- 11
-ing its strong potential. Our results suggest that SpecResNet offers a promising trade-off for 12
-efficient hyperspectral image compression, with potential for further refinement in complex 13
-scenes.
+
+
 
 ## Architecture Overview
 
@@ -40,7 +28,7 @@ Seven hyperspectral datasets are used:
 | Houston 2013 | `Houston/Houston13.mat` | `data` | 349×1905×144 |
 | Houston 2018 | `Houston/Houston2018_input.mat` | `input` | 601×2384×48 |
 | Chikusei | `Chikusei/Chikusei.mat` | `chikusei` | 2517×2335×128 (via h5py) |
-| Washington DC | `WashingtonDC/DC.tif` | — | 1208×307×191 |
+| Washington DC | `WashingtonDC/DC.tif` | `dc` | 1208×307×191 |
 
 Update paths in `config.py` to match your local filesystem.
 
@@ -117,4 +105,5 @@ model.load_state_dict(checkpoint['model_state'])
 Set `CUDA_VISIBLE_DEVICES` in `config.py` **before** any `torch.cuda` calls. The model automatically uses `nn.DataParallel` when multiple GPUs are available.
 
 ### Entropy Coding
+
 Compression metrics use `compressai.entropy_models.EntropyBottleneck` with `channels` = `base_channels // 4`) and is adjusted for different bitrates.
