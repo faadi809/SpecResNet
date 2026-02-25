@@ -12,7 +12,7 @@ The model (`SpecResNet`) is a symmetric 3D convolutional autoencoder that proces
 - `H, W` = 64×64 spatial patch
 
 **Encoder**: Conv3d → HybridResGroupedBlock3D → SEBlock3D (×4 levels with progressive downsampling)    
-**Bottleneck**: GradualQuantization module with progressive noise injection during training
+**Bottleneck**: GradualQuantization module with progressive noise injection during training)
 **Decoder**: ConvTranspose3d → HybridResGroupedBlock3D → SEBlock3D (×4 levels with progressive upsampling)  
 **Final layer**: SC_Module (Spectral Context) — learnable spectral weighting + channel-wise attention
 
@@ -107,3 +107,4 @@ Set `CUDA_VISIBLE_DEVICES` in `config.py` **before** any `torch.cuda` calls. The
 ### Entropy Coding
 
 Compression metrics use `compressai.entropy_models.EntropyBottleneck` with `channels` = `base_channels // 4`) and is adjusted for different bitrates.
+
