@@ -1,5 +1,4 @@
-# SpecResNet: Hyperspectral Image Compression via Hybrid
-Residual Learning and Spectral Calibration
+# SpecResNet: Hyperspectral Image Compression via Hybrid Residual Learning and Spectral Calibration
 
 
 
@@ -108,5 +107,6 @@ Set `CUDA_VISIBLE_DEVICES` in `config.py` **before** any `torch.cuda` calls. The
 ### Entropy Coding
 
 Compression metrics use `compressai.entropy_models.EntropyBottleneck` with `channels` = `base_channels // 4`) and is adjusted for different bitrates.
+
 
 
