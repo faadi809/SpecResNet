@@ -89,11 +89,6 @@ During inference, each hyperspectral cube is processed in spectral chunks of 48 
 - If the last chunk has fewer than 48 bands, it is **zero-padded** to 48 bands
 - The zero-padded bands are **trimmed** from the reconstruction output
 
-## Important Notes
-
-### Botswana Last-Band Removal
-The Botswana dataset has 145 bands. Before evaluation, **the last band is removed** (`botswana_test = botswana_test[:, :, :-1]`). This ensures proper spectral reconstruction alignment during chunk-based inference (144 = 3 × 48).
-
 ### Model Loading
 The saved checkpoint is a **dict** (not a bare `state_dict`). Load as:
 ```python
