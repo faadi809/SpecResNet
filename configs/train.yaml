@@ -1,0 +1,14 @@
+model:
+  in_channels: 48
+  base_channels: 256
+  num_levels: 256
+
+training:
+  epochs: 160
+  batch_size: 32
+  learning_rate: 0.0005
+  patience: 10
+
+loss:
+  lambda_tv: 0.14
+  lambda_sam: 0.26
