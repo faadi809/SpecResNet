@@ -1,7 +1,7 @@
 # SpecResNet: Hyperspectral Image Compression via Hybrid Residual Learning and Spectral Calibration
 ### Fahad Saeed, Shumin Liu, and Jie Chen
 
-##Abstract
+### Abstract
 Hyperspectral imaging provides rich spatial–spectral information but generates huge data volumes, posing significant challenges for storage, transmission, and real-time processing in remote sensing applications. In this study, we propose SpecResNet, a 3D autoencoderbased model for hyperspectral image compression. This framework introduces hybrid residual blocks for preserving representational power and a spectral calibration (SC) block to enhance spectral fidelity. It also uses Squeeze-and-Excitation (SE) blocks for adaptive feature recalibration. Our model obtains different compression operating points by varying model capacity, with bitrate emerging implicitly from the learned latent representations. Experiments on several benchmark datasets show that SpecResNet surpasses the performance of existing frameworks on most datasets in terms of PSNR, MS-SSIM, and SAM, demonstrating its strong potential. Our results suggest that SpecResNet offers a promising trade-off for efficient hyperspectral image compression, with potential for further refinement in complex scenes
 
 ## Architecture Overview
