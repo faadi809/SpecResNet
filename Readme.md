@@ -105,12 +105,12 @@ Set `CUDA_VISIBLE_DEVICES` in `config.py` **before** any `torch.cuda` calls. The
 Compression metrics use `compressai.entropy_models.EntropyBottleneck` with `channels` = `base_channels // 4`) and is adjusted for different bitrates.
 
 ### To cite:
-# @article{Saeed2026SpecResNet,
- # author  = {Fahad Saeed and Shumin Liu and Jie Chen},
- # title   = {SpecResNet: Hyperspectral Image Compression via Hybrid Residual Learning and Spectral Calibration},
- # journal = {Remote Sensing},
-  # year    = {2026},
-  # month   = {April},
-# }
+### @article{Saeed2026SpecResNet,
+ ### author  = {Fahad Saeed and Shumin Liu and Jie Chen},
+ ### title   = {SpecResNet: Hyperspectral Image Compression via Hybrid Residual Learning and Spectral Calibration},
+ ### journal = {Remote Sensing},
+  ### year    = {2026},
+  ### month   = {April},
+### }
 
 
